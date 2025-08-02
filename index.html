@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Basket for My Princess</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .basket {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .item {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 1.5rem;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+    .item:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.3);
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #fff;
+      color: #ee9ca7;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #fce4ec;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      color: #ffe;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Love Basket 💖</h1>
+  <p>Just for you, my princess. Choose what you want today 😘</p>
+
+  <div class="basket">
+    <div class="item">🤗 Cuddles</div>
+    <div class="item">😘 Kisses</div>
+    <div class="item">💋 Forehead Kiss</div>
+    <div class="item">🤍 Tight Hug</div>
+    <div class="item">🌅 Sunset Date</div>
+    <div class="item">🍪 Home-baked Cookies</div>
+    <div class="item">🧺 Picnic in Bed</div>
+    <div class="item">🎶 Your Song On Loop</div>
+  </div>
+
+  <button class="btn" onclick="checkoutLove()">Checkout Basket</button>
+
+  <footer>
+    Made with ❤️ by your personal prince.
+  </footer>
+
+  <script>
+    function checkoutLove() {
+      const message = encodeURIComponent("Hey baby 🥺💗\n\nHere's your Love Basket checkout! 🧺\nI’m saving each one for when I see you next. Can’t wait to shower you with it all.💞\nLove you always, even from far. 😘");
+      window.open(`https://wa.me/?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
